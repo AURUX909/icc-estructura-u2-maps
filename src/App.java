@@ -52,6 +52,33 @@ public class App {
     }
 
     private static void runEjerccios() {
-        // Implementación de ejercicios adicionales
+    Ejercicios ejercicios = new Ejercicios();
+    
+    // Pruebas para areAnagrams
+    System.out.println("\n--- Pruebas de Anagramas ---");
+    System.out.println("'listen' y 'silent': " + Ejercicios.areAnagrams("listen", "silent")); // true
+    System.out.println("'hello' y 'bello': " + Ejercicios.areAnagrams("hello", "bello")); // false
+    System.out.println("'triangle' y 'integral': " + Ejercicios.areAnagrams("triangle", "integral")); // true
+
+    // Pruebas para sumatoriaDeDos
+    System.out.println("\n--- Pruebas de Sumatoria de Dos ---");
+    int[] nums1 = {9, 2, 3, 6};
+    int objetivo1 = 5;
+    int[] resultado1 = ejercicios.sumatoriaDeDos(nums1, objetivo1);
+    System.out.print("nums = [9,2,3,6], objetivo = 5: ");
+    if (resultado1 != null) {
+        System.out.println("[" + resultado1[0] + ", " + resultado1[1] + "]");
+    } else {
+        System.out.println("null");
+    }
+
+    int objetivo2 = 10;
+    int[] resultado2 = ejercicios.sumatoriaDeDos(nums1, objetivo2);
+    System.out.print("nums = [9,2,3,6], objetivo = 10: ");
+    if (resultado2 != null) {
+        System.out.println("[" + resultado2[0] + ", " + resultado2[1] + "]");
+    } else {
+        System.out.println("null");
+    }
     }
 }
